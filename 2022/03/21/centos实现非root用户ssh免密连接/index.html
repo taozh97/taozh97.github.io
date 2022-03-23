@@ -20,25 +20,25 @@
   <meta content="凭海听涛" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1648012650885" as="style">
+  <link rel="preload" href="/css/style.css?time=1648023432496" as="style">
   <link rel="preload" href="/media/fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
   <!-- 页面元数据 -->
-  <title>centos实现非root用户ssh免密连接 - 凭海听涛</title>
-  <meta name="keywords" content="centos,SSH,Java">
+  <title>CentOS实现非root用户ssh免密连接 - 凭海听涛</title>
+  <meta name="keywords" content="CentOS,SSH,Java">
   <meta name="description" content="本文是记录一下在搭建腾讯云服务器时，解决非root用户登录需要输入密码的问题。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="centos实现非root用户ssh免密连接">
-<meta property="og:url" content="https://jiyezt.co/2022/03/21/centos%E5%AE%9E%E7%8E%B0%E9%9D%9Eroot%E7%94%A8%E6%88%B7ssh%E5%85%8D%E5%AF%86%E8%BF%9E%E6%8E%A5/index.html">
+<meta property="og:title" content="CentOS实现非root用户ssh免密连接">
+<meta property="og:url" content="https://jiyezt.co/2022/03/21/CentOS%E5%AE%9E%E7%8E%B0%E9%9D%9Eroot%E7%94%A8%E6%88%B7ssh%E5%85%8D%E5%AF%86%E8%BF%9E%E6%8E%A5/index.html">
 <meta property="og:site_name" content="凭海听涛">
 <meta property="og:description" content="本文是记录一下在搭建腾讯云服务器时，解决非root用户登录需要输入密码的问题。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://jiyezt.co/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2022-03-21T10:37:56.000Z">
-<meta property="article:modified_time" content="2022-03-23T04:48:32.806Z">
+<meta property="article:modified_time" content="2022-03-23T07:43:45.218Z">
 <meta property="article:author" content="Tao">
-<meta property="article:tag" content="centos">
+<meta property="article:tag" content="CentOS">
 <meta property="article:tag" content="SSH">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://jiyezt.co/media/org.volantis/blog/favicon/android-chrome-192x192.png">
@@ -1660,8 +1660,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1648012650885" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1648012650885"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1648023432496" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1648023432496"></noscript>
   
 <script>
 if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
@@ -1732,9 +1732,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   volantis.dom = {}; // 页面Dom see: /source/js/app.js etc.
 
   volantis.GLOBAL_CONFIG ={
-    cdn: {"js":{"app":"/js/app.js?time=1648012650885","sites":"/js/plugins/sites.js?time=1648012650885","friends":"/js/plugins/friends.js?time=1648012650885","parallax":"/js/plugins/parallax.js?time=1648012650885","rightMenu":"/js/plugins/rightMenu.js?time=1648012650885","contributors":"/js/plugins/contributors.js?time=1648012650885","message":"/js/thirdparty/message.js?time=1648012650885","valine":"https://npm.elemecdn.com/valine@1.4/dist/Valine.min.js?time=1648012650885","search":"/js/search/hexo.js?time=1648012650885"},"css":{"style":"/css/style.css?time=1648012650885","message":"/css/message.css?time=1648012650885"}},
+    cdn: {"js":{"app":"/js/app.js?time=1648023432496","sites":"/js/plugins/sites.js?time=1648023432496","friends":"/js/plugins/friends.js?time=1648023432496","parallax":"/js/plugins/parallax.js?time=1648023432496","rightMenu":"/js/plugins/rightMenu.js?time=1648023432496","contributors":"/js/plugins/contributors.js?time=1648023432496","message":"/js/thirdparty/message.js?time=1648023432496","valine":"https://npm.elemecdn.com/valine@1.4/dist/Valine.min.js?time=1648023432496","search":"/js/search/hexo.js?time=1648023432496"},"css":{"style":"/css/style.css?time=1648023432496","message":"/css/message.css?time=1648023432496"}},
     default: {"avatar":"/media/placeholder/avatar/round/3442075.svg","link":"/media/placeholder/link/8f277b4ee0ecd.svg","cover":"/media/placeholder/cover/76b86c0226ffd.svg","image":"/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date('Wed Mar 23 2022 13:17:30 GMT+0800 (中国标准时间)'),
+    lastupdate: new Date('Wed Mar 23 2022 16:17:12 GMT+0800 (中国标准时间)'),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -2463,7 +2463,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
 <div id="l_main" class=''>
   <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow article-type-post" id="post" itemscope itemprop="blogPost">
-  <link itemprop="mainEntityOfPage" href="https://jiyezt.co/2022/03/21/centos%E5%AE%9E%E7%8E%B0%E9%9D%9Eroot%E7%94%A8%E6%88%B7ssh%E5%85%8D%E5%AF%86%E8%BF%9E%E6%8E%A5/">
+  <link itemprop="mainEntityOfPage" href="https://jiyezt.co/2022/03/21/CentOS%E5%AE%9E%E7%8E%B0%E9%9D%9Eroot%E7%94%A8%E6%88%B7ssh%E5%85%8D%E5%AF%86%E8%BF%9E%E6%8E%A5/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="凭海听涛">
   </span>
@@ -2484,7 +2484,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       <h1 class="title" itemprop="name headline">
-        centos实现非root用户ssh免密连接
+        CentOS实现非root用户ssh免密连接
       </h1>
       <div class='new-meta-box'>
         
@@ -2503,14 +2503,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
   <div class='new-meta-item category'>
     <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
-    <a class="category-link" href="/categories/Notes/">Notes</a><span class="sep"></span><a class="category-link" href="/categories/Notes/Linux/">Linux</a>
+    <a class="category-link" href="/categories/Notes/">Notes</a><span class="sep"></span><a class="category-link" href="/categories/Notes/CentOS/">CentOS</a>
     
       <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
         <a href="/categories/Notes/" itemprop="url"><span itemprop="name">Notes</span></a>
       </span>
     
       <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-        <a href="/categories/Notes/Linux/" itemprop="url"><span itemprop="name">Linux</span></a>
+        <a href="/categories/Notes/CentOS/" itemprop="url"><span itemprop="name">CentOS</span></a>
       </span>
     
   </div>
@@ -2546,8 +2546,24 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <p>本文是记录一下在搭建腾讯云服务器时，解决非root用户登录需要输入密码的问题。</p>
 <span id="more"></span>
 
-<p>首先在本地创建ssh密钥</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -t rsa -C &quot;your email&quot;</span><br></pre></td></tr></table></figure>
+<h3 id="1、创建SSH密钥并绑定用户"><a href="#1、创建SSH密钥并绑定用户" class="headerlink" title="1、创建SSH密钥并绑定用户"></a>1、创建SSH密钥并绑定用户</h3><ol>
+<li>首先在本地创建ssh密钥,密钥位置为&#x2F;user&#x2F;.ssh<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;your email&quot;</span><br></pre></td></tr></table></figure>
+.ssh文件夹内有id_rsa和id_rsa.pub两个文件，其中id_rsa.pub是公钥，将公钥上传到腾讯云并绑定云服务器。</li>
+</ol>
+<h3 id="2、创建新用户"><a href="#2、创建新用户" class="headerlink" title="2、创建新用户"></a>2、创建新用户</h3><ol>
+<li>使用SSH连接云服务器<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh root@jiyezt.co</span><br></pre></td></tr></table></figure>
+如果使用的是已经存在的密钥，可能登录失败，需要删除本地机.ssh文件夹下的known_hosts即可。</li>
+<li>创建新用户并设置密码<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@centos ~]# useradd -m -G wheel tao</span><br><span class="line">[root@centos ~]# passwd tao</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h3 id="3、配置新用户密钥文件"><a href="#3、配置新用户密钥文件" class="headerlink" title="3、配置新用户密钥文件"></a>3、配置新用户密钥文件</h3><ol>
+<li>查看&#x2F;root&#x2F;.ssh文件夹下的authorized_keys文件，复制公钥。<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@centos ~]# cat .ssh/authorized_keys</span><br></pre></td></tr></table></figure></li>
+<li>进入新用户目录下，新建.ssh文件夹，创建新文件authorized_keys，将复制的公钥放入。<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[root@centos ~]# cd /home/tao</span><br><span class="line">[root@centos tao]# mkdir .ssh</span><br><span class="line">[root@centos tao]# cd .ssh</span><br><span class="line">[root@centos .ssh]# vim authorized_keys</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h3 id="3、调整文件夹和文件的权限"><a href="#3、调整文件夹和文件的权限" class="headerlink" title="3、调整文件夹和文件的权限"></a>3、调整文件夹和文件的权限</h3><ol>
+<li>调整权限<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@centos .ssh]# chmod 700 ~/.ssh</span><br><span class="line">[root@centos .ssh]# chmod 600 ~/.ssh/authorized_keys</span><br></pre></td></tr></table></figure></li>
+<li>修改&#x2F;etc&#x2F;ssh&#x2F;sshd_config，设置以下配置项<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">AuthorizedKeysFile .ssh/authorized_keys</span><br><span class="line">PubkeyAuthentication yes</span><br></pre></td></tr></table></figure></li>
+</ol>
+
 
   </div>
   
@@ -2562,7 +2578,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <i class="fa-solid fa-bookmark fa-fw" aria-hidden="true"></i><span>相关文章</span>
     </section>
     <section class='body'>
-      <div class="vlts-rps"><a class="item" href="\2022\03\23\nodejs更换全局安装位置\" title="nodejs更换全局安装位置" rel="bookmark "><img src="/media/co.jiyezt/blog/nodejs_install/npm1.png" class="lazyload" data-srcset="/media/co.jiyezt/blog/nodejs_install/npm1.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><span class="title">nodejs更换全局安装位置</span></a></div></section></div>
+      <div class="vlts-rps"><a class="item" href="\2022\03\23\Hexo-Nginx-腾讯云搭建个人博客\" title="Hexo+Nginx+腾讯云搭建个人博客" rel="bookmark "><img src="https://uploadbeta.com/api/pictures/random/?key=BingEverydayWallpaperPicture" class="lazyload" data-srcset="https://uploadbeta.com/api/pictures/random/?key=BingEverydayWallpaperPicture" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><span class="title">Hexo+Nginx+腾讯云搭建个人博客</span><span class="excerpt">本文是采用Hexo进行静态文件生成，使用Nginx作为服务器端的方案进行博客搭建的。搭建过程参考了文后的大佬们的博客，感谢...</span></a></div></section></div>
       
       
         <div class='copyright'>
@@ -2574,7 +2590,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
             
               
-                <p>本文永久链接是：<a href=https://jiyezt.co/2022/03/21/centos%E5%AE%9E%E7%8E%B0%E9%9D%9Eroot%E7%94%A8%E6%88%B7ssh%E5%85%8D%E5%AF%86%E8%BF%9E%E6%8E%A5/>https://jiyezt.co/2022/03/21/centos%E5%AE%9E%E7%8E%B0%E9%9D%9Eroot%E7%94%A8%E6%88%B7ssh%E5%85%8D%E5%AF%86%E8%BF%9E%E6%8E%A5/</a></p>
+                <p>本文永久链接是：<a href=https://jiyezt.co/2022/03/21/CentOS%E5%AE%9E%E7%8E%B0%E9%9D%9Eroot%E7%94%A8%E6%88%B7ssh%E5%85%8D%E5%AF%86%E8%BF%9E%E6%8E%A5/>https://jiyezt.co/2022/03/21/CentOS%E5%AE%9E%E7%8E%B0%E9%9D%9Eroot%E7%94%A8%E6%88%B7ssh%E5%85%8D%E5%AF%86%E8%BF%9E%E6%8E%A5/</a></p>
               
             
           </blockquote>
@@ -2591,7 +2607,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-03-23T12:48:32+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-03-23T15:43:45+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
     <p>更新于：2022年3月23日</p>
@@ -2603,8 +2619,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           
   
-  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/centos/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>centos</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/SSH/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>SSH</p></a></div>
-  <span hidden itemprop="keywords">centos SSH</span>
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/CentOS/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>CentOS</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/SSH/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>SSH</p></a></div>
+  <span hidden itemprop="keywords">CentOS SSH</span>
 
 
         
@@ -2617,7 +2633,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://jiyezt.co/2022/03/21/centos%E5%AE%9E%E7%8E%B0%E9%9D%9Eroot%E7%94%A8%E6%88%B7ssh%E5%85%8D%E5%AF%86%E8%BF%9E%E6%8E%A5/&title=centos实现非root用户ssh免密连接 - 凭海听涛&summary=本文是记录一下在搭建腾讯云服务器时，解决非root用户登录需要输入密码的问题。"
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://jiyezt.co/2022/03/21/CentOS%E5%AE%9E%E7%8E%B0%E9%9D%9Eroot%E7%94%A8%E6%88%B7ssh%E5%85%8D%E5%AF%86%E8%BF%9E%E6%8E%A5/&title=CentOS实现非root用户ssh免密连接 - 凭海听涛&summary=本文是记录一下在搭建腾讯云服务器时，解决非root用户登录需要输入密码的问题。"
           
           >
           
@@ -2629,7 +2645,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://jiyezt.co/2022/03/21/centos%E5%AE%9E%E7%8E%B0%E9%9D%9Eroot%E7%94%A8%E6%88%B7ssh%E5%85%8D%E5%AF%86%E8%BF%9E%E6%8E%A5/&title=centos实现非root用户ssh免密连接 - 凭海听涛&summary=本文是记录一下在搭建腾讯云服务器时，解决非root用户登录需要输入密码的问题。"
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://jiyezt.co/2022/03/21/CentOS%E5%AE%9E%E7%8E%B0%E9%9D%9Eroot%E7%94%A8%E6%88%B7ssh%E5%85%8D%E5%AF%86%E8%BF%9E%E6%8E%A5/&title=CentOS实现非root用户ssh免密连接 - 凭海听涛&summary=本文是记录一下在搭建腾讯云服务器时，解决非root用户登录需要输入密码的问题。"
           
           >
           
@@ -2641,7 +2657,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=https://jiyezt.co/2022/03/21/centos%E5%AE%9E%E7%8E%B0%E9%9D%9Eroot%E7%94%A8%E6%88%B7ssh%E5%85%8D%E5%AF%86%E8%BF%9E%E6%8E%A5/&title=centos实现非root用户ssh免密连接 - 凭海听涛&summary=本文是记录一下在搭建腾讯云服务器时，解决非root用户登录需要输入密码的问题。"
+          target="_blank" href="http://service.weibo.com/share/share.php?url=https://jiyezt.co/2022/03/21/CentOS%E5%AE%9E%E7%8E%B0%E9%9D%9Eroot%E7%94%A8%E6%88%B7ssh%E5%85%8D%E5%AF%86%E8%BF%9E%E6%8E%A5/&title=CentOS实现非root用户ssh免密连接 - 凭海听涛&summary=本文是记录一下在搭建腾讯云服务器时，解决非root用户登录需要输入密码的问题。"
           
           >
           
@@ -2674,8 +2690,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
-        <a class='prev' href='/2022/03/23/nodejs%E6%9B%B4%E6%8D%A2%E5%85%A8%E5%B1%80%E5%AE%89%E8%A3%85%E4%BD%8D%E7%BD%AE/'>
-          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>nodejs更换全局安装位置</p>
+        <a class='prev' href='/2022/03/23/Node.js%E6%9B%B4%E6%8D%A2%E5%85%A8%E5%B1%80%E5%AE%89%E8%A3%85%E4%BD%8D%E7%BD%AE/'>
+          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>Node.js更换全局安装位置</p>
           <p class='content'>1、查看当前配置信息
 查看所有配置信息1npm config ls
 
@@ -2683,11 +2699,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 查看npm全局目录12npm config get prefi...</p>
         </a>
       
-      
-        <a class='next' href='/2022/03/21/hello-world/'>
-          <p class='title'>Hello World<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any ...</p>
-        </a>
       
     </div>
   
@@ -2702,7 +2713,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <article class="post white-box reveal shadow" id="comments">
     <span hidden>
-      <meta itemprop="discussionUrl" content="/2022/03/21/centos%E5%AE%9E%E7%8E%B0%E9%9D%9Eroot%E7%94%A8%E6%88%B7ssh%E5%85%8D%E5%AF%86%E8%BF%9E%E6%8E%A5/index.html#comments">
+      <meta itemprop="discussionUrl" content="/2022/03/21/CentOS%E5%AE%9E%E7%8E%B0%E9%9D%9Eroot%E7%94%A8%E6%88%B7ssh%E5%85%8D%E5%AF%86%E8%BF%9E%E6%8E%A5/index.html#comments">
     </span>
     <p ct><i class='fa-solid fa-comments'></i> 评论</p>
     
@@ -2725,9 +2736,19 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 
-  <div class="pjax">
-    <!-- pjax占位 -->
-  </div>
+  <section class="widget toc-wrapper shadow desktop mobile pjax" id="toc-div" >
+    
+  <header>
+    
+      <i class="fa-solid fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+    <div class='content'>
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81%E5%88%9B%E5%BB%BASSH%E5%AF%86%E9%92%A5%E5%B9%B6%E7%BB%91%E5%AE%9A%E7%94%A8%E6%88%B7"><span class="toc-text">1、创建SSH密钥并绑定用户</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81%E5%88%9B%E5%BB%BA%E6%96%B0%E7%94%A8%E6%88%B7"><span class="toc-text">2、创建新用户</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%E3%80%81%E9%85%8D%E7%BD%AE%E6%96%B0%E7%94%A8%E6%88%B7%E5%AF%86%E9%92%A5%E6%96%87%E4%BB%B6"><span class="toc-text">3、配置新用户密钥文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%E3%80%81%E8%B0%83%E6%95%B4%E6%96%87%E4%BB%B6%E5%A4%B9%E5%92%8C%E6%96%87%E4%BB%B6%E7%9A%84%E6%9D%83%E9%99%90"><span class="toc-text">3、调整文件夹和文件的权限</span></a></li></ol>
+    </div>
+  </section>
 
   
 
@@ -2777,7 +2798,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <script>
   window.pdata={}
   pdata.ispage=true;
-  pdata.postTitle="centos实现非root用户ssh免密连接";
+  pdata.postTitle="CentOS实现非root用户ssh免密连接";
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   pdata.commentConfig={};
@@ -2887,7 +2908,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <!-- internal -->
 
-<script src="/js/app.js?time=1648012650885.js"></script>
+<script src="/js/app.js?time=1648023432496.js"></script>
 
 
 
@@ -3079,7 +3100,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
     </ul>
   </div>
-  <script>volantis.js('/js/plugins/rightMenu.js?time=1648012650885')</script>
+  <script>volantis.js('/js/plugins/rightMenu.js?time=1648023432496')</script>
 
 
 
@@ -3092,19 +3113,19 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1648012650885")
+        volantis.js("/js/plugins/sites.js?time=1648023432496")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1648012650885")
+        volantis.js("/js/plugins/friends.js?time=1648023432496")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1648012650885")
+        volantis.js("/js/plugins/contributors.js?time=1648023432496")
       }
     
   };
@@ -3229,7 +3250,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("/js/search/hexo.js?time=1648012650885");
+    return volantis.js("/js/search/hexo.js?time=1648023432496");
   }
 
   function loadSearchService() {
@@ -3520,7 +3541,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"凭海听涛","url":"https://jiyezt.co/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Tao","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://jiyezt.co/","sameAs":["https://github.com/volantis-x"],"description":"我是一个要努力成为大佬的菜鸡！"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://jiyezt.co/","name":"凭海听涛"}},{"@type":"ListItem","position":2,"item":{"@id":"https://jiyezt.co/categories/Notes/","name":"Notes"}},{"@type":"ListItem","position":2,"item":{"@id":"https://jiyezt.co/categories/Notes/Linux/","name":"Linux"}},{"@type":"ListItem","position":3,"item":{"@id":"https://jiyezt.co/2022/03/21/centos实现非root用户ssh免密连接/","name":"centos实现非root用户ssh免密连接"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"centos实现非root用户ssh免密连接","description":"本文是记录一下在搭建腾讯云服务器时，解决非root用户登录需要输入密码的问题。","datePublished":"2022-03-21T10:37:56.000Z","dateModified":"2022-03-23T04:48:32.806Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://jiyezt.co/2022/03/21/centos%E5%AE%9E%E7%8E%B0%E9%9D%9Eroot%E7%94%A8%E6%88%B7ssh%E5%85%8D%E5%AF%86%E8%BF%9E%E6%8E%A5/"},"author":{"@type":"Person","name":"Tao","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://jiyezt.co/"},"publisher":{"@type":"Organization","name":"凭海听涛","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://jiyezt.co/2022/03/21/centos%E5%AE%9E%E7%8E%B0%E9%9D%9Eroot%E7%94%A8%E6%88%B7ssh%E5%85%8D%E5%AF%86%E8%BF%9E%E6%8E%A5/","wordCount":39,"articleSection":"Notes","keywords":"centos,SSH","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"凭海听涛","url":"https://jiyezt.co/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Tao","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://jiyezt.co/","sameAs":["https://github.com/volantis-x"],"description":"我是一个要努力成为大佬的菜鸡！"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://jiyezt.co/","name":"凭海听涛"}},{"@type":"ListItem","position":2,"item":{"@id":"https://jiyezt.co/categories/Notes/","name":"Notes"}},{"@type":"ListItem","position":2,"item":{"@id":"https://jiyezt.co/categories/Notes/CentOS/","name":"CentOS"}},{"@type":"ListItem","position":3,"item":{"@id":"https://jiyezt.co/2022/03/21/CentOS实现非root用户ssh免密连接/","name":"CentOS实现非root用户ssh免密连接"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"CentOS实现非root用户ssh免密连接","description":"本文是记录一下在搭建腾讯云服务器时，解决非root用户登录需要输入密码的问题。","datePublished":"2022-03-21T10:37:56.000Z","dateModified":"2022-03-23T07:43:45.218Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://jiyezt.co/2022/03/21/CentOS%E5%AE%9E%E7%8E%B0%E9%9D%9Eroot%E7%94%A8%E6%88%B7ssh%E5%85%8D%E5%AF%86%E8%BF%9E%E6%8E%A5/"},"author":{"@type":"Person","name":"Tao","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://jiyezt.co/"},"publisher":{"@type":"Organization","name":"凭海听涛","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://jiyezt.co/2022/03/21/CentOS%E5%AE%9E%E7%8E%B0%E9%9D%9Eroot%E7%94%A8%E6%88%B7ssh%E5%85%8D%E5%AF%86%E8%BF%9E%E6%8E%A5/","wordCount":39,"articleSection":"Notes","keywords":"CentOS,SSH","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 <!-- more -->

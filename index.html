@@ -20,7 +20,7 @@
   <meta content="凭海听涛" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1648012650915" as="style">
+  <link rel="preload" href="/css/style.css?time=1648023432521" as="style">
   <link rel="preload" href="/media/fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
@@ -1657,8 +1657,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1648012650915" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1648012650915"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1648023432521" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1648023432521"></noscript>
   
 <script>
 if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
@@ -1729,9 +1729,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   volantis.dom = {}; // 页面Dom see: /source/js/app.js etc.
 
   volantis.GLOBAL_CONFIG ={
-    cdn: {"js":{"app":"/js/app.js?time=1648012650915","sites":"/js/plugins/sites.js?time=1648012650915","friends":"/js/plugins/friends.js?time=1648012650915","parallax":"/js/plugins/parallax.js?time=1648012650915","rightMenu":"/js/plugins/rightMenu.js?time=1648012650915","contributors":"/js/plugins/contributors.js?time=1648012650915","message":"/js/thirdparty/message.js?time=1648012650915","valine":"https://npm.elemecdn.com/valine@1.4/dist/Valine.min.js?time=1648012650915","search":"/js/search/hexo.js?time=1648012650915"},"css":{"style":"/css/style.css?time=1648012650915","message":"/css/message.css?time=1648012650915"}},
+    cdn: {"js":{"app":"/js/app.js?time=1648023432521","sites":"/js/plugins/sites.js?time=1648023432521","friends":"/js/plugins/friends.js?time=1648023432521","parallax":"/js/plugins/parallax.js?time=1648023432521","rightMenu":"/js/plugins/rightMenu.js?time=1648023432521","contributors":"/js/plugins/contributors.js?time=1648023432521","message":"/js/thirdparty/message.js?time=1648023432521","valine":"https://npm.elemecdn.com/valine@1.4/dist/Valine.min.js?time=1648023432521","search":"/js/search/hexo.js?time=1648023432521"},"css":{"style":"/css/style.css?time=1648023432521","message":"/css/message.css?time=1648023432521"}},
     default: {"avatar":"/media/placeholder/avatar/round/3442075.svg","link":"/media/placeholder/link/8f277b4ee0ecd.svg","cover":"/media/placeholder/cover/76b86c0226ffd.svg","image":"/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date('Wed Mar 23 2022 13:17:30 GMT+0800 (中国标准时间)'),
+    lastupdate: new Date('Wed Mar 23 2022 16:17:12 GMT+0800 (中国标准时间)'),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -2490,7 +2490,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           <div class='post-wrapper'>
             <div class="post post-v3 white-box reveal shadow"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://jiyezt.co/2022/03/23/nodejs%E6%9B%B4%E6%8D%A2%E5%85%A8%E5%B1%80%E5%AE%89%E8%A3%85%E4%BD%8D%E7%BD%AE/">
+  <link itemprop="mainEntityOfPage" href="https://jiyezt.co/2022/03/23/Hexo-Nginx-%E8%85%BE%E8%AE%AF%E4%BA%91%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="凭海听涛">
   </span>
@@ -2508,8 +2508,73 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
     <h2 class="article-title"  itemprop="name headline">
-      <a href="/2022/03/23/nodejs%E6%9B%B4%E6%8D%A2%E5%85%A8%E5%B1%80%E5%AE%89%E8%A3%85%E4%BD%8D%E7%BD%AE/"  itemprop="url">
-        nodejs更换全局安装位置
+      <a href="/2022/03/23/Hexo-Nginx-%E8%85%BE%E8%AE%AF%E4%BA%91%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"  itemprop="url">
+        Hexo+Nginx+腾讯云搭建个人博客
+      </a>
+    </h2>
+  
+  <div class='md article-desc' itemprop="articleBody">
+    
+      <p>本文是采用Hexo进行静态文件生成，使用Nginx作为服务器端的方案进行博客搭建的。搭建过程参考了文后的大佬们的博客，感谢大佬们的分享，以下进入正题。</p>
+    
+  </div>
+  
+    <div class='meta-v3' line_style='solid'>
+      <div>
+        
+        <time itemprop="dateCreated datePublished" datetime="2022-03-23T14:38:45+08:00">2022-03-23</time>
+        
+          <span class="dot"></span>
+          <a class="category-link" href="/categories/Notes/">Notes</a><span class="sep"></span><a class="category-link" href="/categories/Notes/CentOS/">CentOS</a>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/categories/Notes/" itemprop="url"><span itemprop="name">Notes</span></a>
+            </span>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/categories/Notes/CentOS/" itemprop="url"><span itemprop="name">CentOS</span></a>
+            </span>
+          
+        
+      </div>
+      
+        <div>
+          <a class='readmore' href='/2022/03/23/Hexo-Nginx-%E8%85%BE%E8%AE%AF%E4%BA%91%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/' itemprop="url">
+            阅读全文
+          </a>
+        </div>
+      
+    </div>
+  
+
+</div>
+
+          </div>
+        
+      
+        
+          <div class='post-wrapper'>
+            <div class="post post-v3 white-box reveal shadow"  itemscope itemtype="http://schema.org/Article" >
+  <link itemprop="mainEntityOfPage" href="https://jiyezt.co/2022/03/23/Node.js%E6%9B%B4%E6%8D%A2%E5%85%A8%E5%B1%80%E5%AE%89%E8%A3%85%E4%BD%8D%E7%BD%AE/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="凭海听涛">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="凭海听涛">
+    <meta itemprop="description" content="我是一个要努力成为大佬的菜鸡！">
+  </span>
+  
+  
+  
+    <span hidden>
+      <meta itemprop="image" content="/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  
+    
+    <h2 class="article-title"  itemprop="name headline">
+      <a href="/2022/03/23/Node.js%E6%9B%B4%E6%8D%A2%E5%85%A8%E5%B1%80%E5%AE%89%E8%A3%85%E4%BD%8D%E7%BD%AE/"  itemprop="url">
+        Node.js更换全局安装位置
       </a>
     </h2>
   
@@ -2521,7 +2586,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 查看npm缓存目录1npm config get cache
 查看npm全局目录12npm config get prefixnpm root -g
-2、修改全局安装目录和缓存目录12npm config set prefix D:\Develop\nodejs\npmnpm config set cache D:\Dev...
+
+2、修改全局安装目录和缓存目录
+修改配置12npm config set prefix D:\Develop\nodejs\npmnpm config set cache ...
       
     
   </div>
@@ -2546,7 +2613,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       </div>
       
         <div>
-          <a class='readmore' href='/2022/03/23/nodejs%E6%9B%B4%E6%8D%A2%E5%85%A8%E5%B1%80%E5%AE%89%E8%A3%85%E4%BD%8D%E7%BD%AE/' itemprop="url">
+          <a class='readmore' href='/2022/03/23/Node.js%E6%9B%B4%E6%8D%A2%E5%85%A8%E5%B1%80%E5%AE%89%E8%A3%85%E4%BD%8D%E7%BD%AE/' itemprop="url">
             阅读全文
           </a>
         </div>
@@ -2562,7 +2629,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         
           <div class='post-wrapper'>
             <div class="post post-v3 white-box reveal shadow"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://jiyezt.co/2022/03/21/centos%E5%AE%9E%E7%8E%B0%E9%9D%9Eroot%E7%94%A8%E6%88%B7ssh%E5%85%8D%E5%AF%86%E8%BF%9E%E6%8E%A5/">
+  <link itemprop="mainEntityOfPage" href="https://jiyezt.co/2022/03/21/CentOS%E5%AE%9E%E7%8E%B0%E9%9D%9Eroot%E7%94%A8%E6%88%B7ssh%E5%85%8D%E5%AF%86%E8%BF%9E%E6%8E%A5/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="凭海听涛">
   </span>
@@ -2580,8 +2647,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
     <h2 class="article-title"  itemprop="name headline">
-      <a href="/2022/03/21/centos%E5%AE%9E%E7%8E%B0%E9%9D%9Eroot%E7%94%A8%E6%88%B7ssh%E5%85%8D%E5%AF%86%E8%BF%9E%E6%8E%A5/"  itemprop="url">
-        centos实现非root用户ssh免密连接
+      <a href="/2022/03/21/CentOS%E5%AE%9E%E7%8E%B0%E9%9D%9Eroot%E7%94%A8%E6%88%B7ssh%E5%85%8D%E5%AF%86%E8%BF%9E%E6%8E%A5/"  itemprop="url">
+        CentOS实现非root用户ssh免密连接
       </a>
     </h2>
   
@@ -2597,77 +2664,21 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         <time itemprop="dateCreated datePublished" datetime="2022-03-21T18:37:56+08:00">2022-03-21</time>
         
           <span class="dot"></span>
-          <a class="category-link" href="/categories/Notes/">Notes</a><span class="sep"></span><a class="category-link" href="/categories/Notes/Linux/">Linux</a>
+          <a class="category-link" href="/categories/Notes/">Notes</a><span class="sep"></span><a class="category-link" href="/categories/Notes/CentOS/">CentOS</a>
           
             <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
               <a href="/categories/Notes/" itemprop="url"><span itemprop="name">Notes</span></a>
             </span>
           
             <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/Notes/Linux/" itemprop="url"><span itemprop="name">Linux</span></a>
+              <a href="/categories/Notes/CentOS/" itemprop="url"><span itemprop="name">CentOS</span></a>
             </span>
           
         
       </div>
       
         <div>
-          <a class='readmore' href='/2022/03/21/centos%E5%AE%9E%E7%8E%B0%E9%9D%9Eroot%E7%94%A8%E6%88%B7ssh%E5%85%8D%E5%AF%86%E8%BF%9E%E6%8E%A5/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
-
-</div>
-
-          </div>
-        
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://jiyezt.co/2022/03/21/hello-world/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="凭海听涛">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="凭海听涛">
-    <meta itemprop="description" content="我是一个要努力成为大佬的菜鸡！">
-  </span>
-  
-  
-  
-    <span hidden>
-      <meta itemprop="image" content="/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-    </span>
-  
-  
-    
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2022/03/21/hello-world/"  itemprop="url">
-        Hello World
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Qu...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-03-21T15:51:52+08:00">2022-03-21</time>
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2022/03/21/hello-world/' itemprop="url">
+          <a class='readmore' href='/2022/03/21/CentOS%E5%AE%9E%E7%8E%B0%E9%9D%9Eroot%E7%94%A8%E6%88%B7ssh%E5%85%8D%E5%AF%86%E8%BF%9E%E6%8E%A5/' itemprop="url">
             阅读全文
           </a>
         </div>
@@ -2779,12 +2790,12 @@ Qu...
           <li><a class="flat-box"
             title="/categories/Notes/" href="/categories/Notes/"
             active-action="action-categoriesNotes"
-            ><div class='name'>Notes</div><div class='badge'>(2)</div></a></li>
+            ><div class='name'>Notes</div><div class='badge'>(3)</div></a></li>
         
           <li><a class="flat-box child"
-            title="/categories/Notes/Linux/" href="/categories/Notes/Linux/"
-            active-action="action-categoriesNotesLinux"
-            ><div class='name'>Linux</div><div class='badge'>(1)</div></a></li>
+            title="/categories/Notes/CentOS/" href="/categories/Notes/CentOS/"
+            active-action="action-categoriesNotesCentOS"
+            ><div class='name'>CentOS</div><div class='badge'>(2)</div></a></li>
         
           <li><a class="flat-box child"
             title="/categories/Notes/Node-js/" href="/categories/Notes/Node-js/"
@@ -2813,7 +2824,7 @@ Qu...
 
 
     <div class='content'>
-      <a href="/tags/Node-js/" style="font-size: 14px; color: #999">Node.js</a> <a href="/tags/SSH/" style="font-size: 14px; color: #999">SSH</a> <a href="/tags/centos/" style="font-size: 14px; color: #999">centos</a>
+      <a href="/tags/CentOS/" style="font-size: 14px; color: #999">CentOS</a> <a href="/tags/Centos/" style="font-size: 14px; color: #999">Centos</a> <a href="/tags/Hexo/" style="font-size: 14px; color: #999">Hexo</a> <a href="/tags/Nginx/" style="font-size: 14px; color: #999">Nginx</a> <a href="/tags/Node-js/" style="font-size: 24px; color: #555">Node.js</a> <a href="/tags/SSH/" style="font-size: 14px; color: #999">SSH</a>
     </div>
   </section>
 
@@ -2970,7 +2981,7 @@ Qu...
 
 <!-- internal -->
 
-<script src="/js/app.js?time=1648012650915.js"></script>
+<script src="/js/app.js?time=1648023432521.js"></script>
 
 
 
@@ -3162,7 +3173,7 @@ Qu...
       
     </ul>
   </div>
-  <script>volantis.js('/js/plugins/rightMenu.js?time=1648012650915')</script>
+  <script>volantis.js('/js/plugins/rightMenu.js?time=1648023432521')</script>
 
 
 
@@ -3175,19 +3186,19 @@ Qu...
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1648012650915")
+        volantis.js("/js/plugins/sites.js?time=1648023432521")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1648012650915")
+        volantis.js("/js/plugins/friends.js?time=1648023432521")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1648012650915")
+        volantis.js("/js/plugins/contributors.js?time=1648023432521")
       }
     
   };
@@ -3312,7 +3323,7 @@ Qu...
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("/js/search/hexo.js?time=1648012650915");
+    return volantis.js("/js/search/hexo.js?time=1648023432521");
   }
 
   function loadSearchService() {
