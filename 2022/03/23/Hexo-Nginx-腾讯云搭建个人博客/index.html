@@ -20,7 +20,7 @@
   <meta content="凭海听涛" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1648029057900" as="style">
+  <link rel="preload" href="/css/style.css?time=1648029277511" as="style">
   <link rel="preload" href="/media/fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
@@ -36,7 +36,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://jiyezt.co/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2022-03-23T06:38:45.000Z">
-<meta property="article:modified_time" content="2022-03-23T09:21:03.497Z">
+<meta property="article:modified_time" content="2022-03-23T09:54:03.906Z">
 <meta property="article:author" content="Tao">
 <meta property="article:tag" content="Centos">
 <meta property="article:tag" content="Nginx">
@@ -1661,8 +1661,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1648029057900" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1648029057900"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1648029277511" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1648029277511"></noscript>
   
 <script>
 if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
@@ -1733,9 +1733,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   volantis.dom = {}; // 页面Dom see: /source/js/app.js etc.
 
   volantis.GLOBAL_CONFIG ={
-    cdn: {"js":{"app":"/js/app.js?time=1648029057900","sites":"/js/plugins/sites.js?time=1648029057900","friends":"/js/plugins/friends.js?time=1648029057900","parallax":"/js/plugins/parallax.js?time=1648029057900","rightMenu":"/js/plugins/rightMenu.js?time=1648029057900","contributors":"/js/plugins/contributors.js?time=1648029057900","message":"/js/thirdparty/message.js?time=1648029057900","valine":"https://npm.elemecdn.com/valine@1.4/dist/Valine.min.js?time=1648029057900","search":"/js/search/hexo.js?time=1648029057900"},"css":{"style":"/css/style.css?time=1648029057900","message":"/css/message.css?time=1648029057900"}},
+    cdn: {"js":{"app":"/js/app.js?time=1648029277511","sites":"/js/plugins/sites.js?time=1648029277511","friends":"/js/plugins/friends.js?time=1648029277511","parallax":"/js/plugins/parallax.js?time=1648029277511","rightMenu":"/js/plugins/rightMenu.js?time=1648029277511","contributors":"/js/plugins/contributors.js?time=1648029277511","message":"/js/thirdparty/message.js?time=1648029277511","valine":"https://npm.elemecdn.com/valine@1.4/dist/Valine.min.js?time=1648029277511","search":"/js/search/hexo.js?time=1648029277511"},"css":{"style":"/css/style.css?time=1648029277511","message":"/css/message.css?time=1648029277511"}},
     default: {"avatar":"/media/placeholder/avatar/round/3442075.svg","link":"/media/placeholder/link/8f277b4ee0ecd.svg","cover":"/media/placeholder/cover/76b86c0226ffd.svg","image":"/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date('Wed Mar 23 2022 17:50:57 GMT+0800 (中国标准时间)'),
+    lastupdate: new Date('Wed Mar 23 2022 17:54:37 GMT+0800 (中国标准时间)'),
     sidebar: {
       for_page: ["blogger","category","tagcloud","webinfo"],
       for_post: ["toc"],
@@ -2573,7 +2573,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -v git@(ServerIP)</span><br></pre></td></tr></table></figure>
 <ol start="4">
 <li>调整文件夹和文件的权限<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[root@centos .ssh]# chmod 700 ~/.ssh</span><br><span class="line">[root@centos .ssh]# chmod 600 ~/.ssh/authorized_keys</span><br></pre></td></tr></table></figure></li>
-<li>创建网站目录并配置权限<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mkdir /home/hexo</span><br><span class="line">chown git:git -R /home/hexo</span><br></pre></td></tr></table></figure></li>
+<li>创建网站目录并配置权限<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mkdir /home/blog</span><br><span class="line">chown git:git -R /home/blog</span><br></pre></td></tr></table></figure></li>
 <li>创建Git远程仓库<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd /home/git</span><br><span class="line">git init --bare blog.git</span><br><span class="line">chown git:git -R blog.git</span><br></pre></td></tr></table></figure></li>
 <li>同步网站根目录<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">vim /blog.git/hooks/post-receive</span><br><span class="line"></span><br><span class="line"># !/bin/sh</span><br><span class="line">git --work-tree=/home/blog --git-dir=/home/git/blog.git checkout -f</span><br></pre></td></tr></table></figure></li>
 <li>修改权限<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod +x /home/git/blog.git/hooks/post-receive</span><br></pre></td></tr></table></figure></li>
@@ -2646,7 +2646,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-03-23T17:21:03+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-03-23T17:54:03+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
     <p>更新于：2022年3月23日</p>
@@ -3003,7 +3003,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <!-- internal -->
 
-<script src="/js/app.js?time=1648029057900.js"></script>
+<script src="/js/app.js?time=1648029277511.js"></script>
 
 
 
@@ -3195,7 +3195,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
     </ul>
   </div>
-  <script>volantis.js('/js/plugins/rightMenu.js?time=1648029057900')</script>
+  <script>volantis.js('/js/plugins/rightMenu.js?time=1648029277511')</script>
 
 
 
@@ -3208,19 +3208,19 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1648029057900")
+        volantis.js("/js/plugins/sites.js?time=1648029277511")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1648029057900")
+        volantis.js("/js/plugins/friends.js?time=1648029277511")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1648029057900")
+        volantis.js("/js/plugins/contributors.js?time=1648029277511")
       }
     
   };
@@ -3347,7 +3347,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("/js/search/hexo.js?time=1648029057900");
+    return volantis.js("/js/search/hexo.js?time=1648029277511");
   }
 
   function loadSearchService() {
@@ -3847,7 +3847,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"凭海听涛","url":"https://jiyezt.co/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Tao","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://jiyezt.co/","sameAs":["https://github.com/volantis-x"],"description":"我是一个要努力成为大佬的菜鸡！"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://jiyezt.co/","name":"凭海听涛"}},{"@type":"ListItem","position":2,"item":{"@id":"https://jiyezt.co/categories/Notes/","name":"Notes"}},{"@type":"ListItem","position":2,"item":{"@id":"https://jiyezt.co/categories/Notes/CentOS/","name":"CentOS"}},{"@type":"ListItem","position":3,"item":{"@id":"https://jiyezt.co/2022/03/23/Hexo-Nginx-腾讯云搭建个人博客/","name":"Hexo+Nginx+腾讯云搭建个人博客"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Hexo+Nginx+腾讯云搭建个人博客","description":"","datePublished":"2022-03-23T06:38:45.000Z","dateModified":"2022-03-23T09:21:03.497Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://jiyezt.co/2022/03/23/Hexo-Nginx-%E8%85%BE%E8%AE%AF%E4%BA%91%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"},"author":{"@type":"Person","name":"Tao","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://jiyezt.co/"},"publisher":{"@type":"Organization","name":"凭海听涛","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://jiyezt.co/2022/03/23/Hexo-Nginx-%E8%85%BE%E8%AE%AF%E4%BA%91%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/","wordCount":0,"articleSection":"Notes","keywords":"Centos,Nginx,Hexo","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"凭海听涛","url":"https://jiyezt.co/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Tao","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://jiyezt.co/","sameAs":["https://github.com/volantis-x"],"description":"我是一个要努力成为大佬的菜鸡！"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://jiyezt.co/","name":"凭海听涛"}},{"@type":"ListItem","position":2,"item":{"@id":"https://jiyezt.co/categories/Notes/","name":"Notes"}},{"@type":"ListItem","position":2,"item":{"@id":"https://jiyezt.co/categories/Notes/CentOS/","name":"CentOS"}},{"@type":"ListItem","position":3,"item":{"@id":"https://jiyezt.co/2022/03/23/Hexo-Nginx-腾讯云搭建个人博客/","name":"Hexo+Nginx+腾讯云搭建个人博客"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Hexo+Nginx+腾讯云搭建个人博客","description":"","datePublished":"2022-03-23T06:38:45.000Z","dateModified":"2022-03-23T09:54:03.906Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://jiyezt.co/2022/03/23/Hexo-Nginx-%E8%85%BE%E8%AE%AF%E4%BA%91%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"},"author":{"@type":"Person","name":"Tao","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://jiyezt.co/"},"publisher":{"@type":"Organization","name":"凭海听涛","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://jiyezt.co/2022/03/23/Hexo-Nginx-%E8%85%BE%E8%AE%AF%E4%BA%91%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/","wordCount":0,"articleSection":"Notes","keywords":"Centos,Nginx,Hexo","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 <!-- more -->
