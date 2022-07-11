@@ -20,21 +20,23 @@
   <meta content="凭海听涛" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1657562290578" as="style">
+  <link rel="preload" href="/css/style.css?time=1657565414079" as="style">
   <link rel="preload" href="/media/fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
   <!-- 页面元数据 -->
   <title>day01_Java基础语法 - 凭海听涛</title>
   <meta name="keywords" content="Java,Java">
-  <meta property="og:type" content="article">
+  <meta name="description" content="一、数据类型1. Java的八种基本数据类型   数据类型 位数 默认值 取值范围 举例    byte-位 8 0 -2^7 - 2^7-1 byte b &#x3D; 10;   short-短整数 16 0 -2^15 - 2^15-1 short s &#x3D; 10;   int-整数 32 0 -2^31 - 2^31-1 int i &#x3D; 10;   long-长整数 64">
+<meta property="og:type" content="article">
 <meta property="og:title" content="day01_Java基础语法">
 <meta property="og:url" content="https://jiyezt.co/2022/07/12/day01-Java%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/index.html">
 <meta property="og:site_name" content="凭海听涛">
+<meta property="og:description" content="一、数据类型1. Java的八种基本数据类型   数据类型 位数 默认值 取值范围 举例    byte-位 8 0 -2^7 - 2^7-1 byte b &#x3D; 10;   short-短整数 16 0 -2^15 - 2^15-1 short s &#x3D; 10;   int-整数 32 0 -2^31 - 2^31-1 int i &#x3D; 10;   long-长整数 64">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://jiyezt.co/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2022-07-11T17:56:43.000Z">
-<meta property="article:modified_time" content="2022-07-11T17:58:06.886Z">
+<meta property="article:modified_time" content="2022-07-11T18:50:09.718Z">
 <meta property="article:author" content="Tao">
 <meta property="article:tag" content="Java">
 <meta name="twitter:card" content="summary">
@@ -1657,8 +1659,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1657562290578" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1657562290578"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1657565414079" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1657565414079"></noscript>
   
 <script>
 if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
@@ -1729,9 +1731,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   volantis.dom = {}; // 页面Dom see: /source/js/app.js etc.
 
   volantis.GLOBAL_CONFIG ={
-    cdn: {"js":{"app":"/js/app.js?time=1657562290578","sites":"/js/plugins/sites.js?time=1657562290578","friends":"/js/plugins/friends.js?time=1657562290578","parallax":"/js/plugins/parallax.js?time=1657562290578","rightMenu":"/js/plugins/rightMenu.js?time=1657562290578","contributors":"/js/plugins/contributors.js?time=1657562290578","message":"/js/thirdparty/message.js?time=1657562290578","valine":"https://npm.elemecdn.com/valine@1.4/dist/Valine.min.js?time=1657562290578","search":"/js/search/hexo.js?time=1657562290578"},"css":{"style":"/css/style.css?time=1657562290578","message":"/css/message.css?time=1657562290578"}},
+    cdn: {"js":{"app":"/js/app.js?time=1657565414079","sites":"/js/plugins/sites.js?time=1657565414079","friends":"/js/plugins/friends.js?time=1657565414079","parallax":"/js/plugins/parallax.js?time=1657565414079","rightMenu":"/js/plugins/rightMenu.js?time=1657565414079","contributors":"/js/plugins/contributors.js?time=1657565414079","message":"/js/thirdparty/message.js?time=1657565414079","valine":"https://npm.elemecdn.com/valine@1.4/dist/Valine.min.js?time=1657565414079","search":"/js/search/hexo.js?time=1657565414079"},"css":{"style":"/css/style.css?time=1657565414079","message":"/css/message.css?time=1657565414079"}},
     default: {"avatar":"/media/placeholder/avatar/round/3442075.svg","link":"/media/placeholder/link/8f277b4ee0ecd.svg","cover":"/media/placeholder/cover/76b86c0226ffd.svg","image":"/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date('Tue Jul 12 2022 01:58:10 GMT+0800 (中国标准时间)'),
+    lastupdate: new Date('Tue Jul 12 2022 02:50:14 GMT+0800 (中国标准时间)'),
     sidebar: {
       for_page: ["blogger","category","tagcloud","webinfo"],
       for_post: ["toc"],
@@ -2555,8 +2557,131 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    
+    <h2 id="一、数据类型"><a href="#一、数据类型" class="headerlink" title="一、数据类型"></a>一、数据类型</h2><div class="story post-story"><h3 id="1-Java的八种基本数据类型"><a href="#1-Java的八种基本数据类型" class="headerlink" title="1. Java的八种基本数据类型"></a>1. Java的八种基本数据类型</h3><table>
+<thead>
+<tr>
+<th align="center">数据类型</th>
+<th align="center">位数</th>
+<th align="center">默认值</th>
+<th align="center">取值范围</th>
+<th align="center">举例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">byte-位</td>
+<td align="center">8</td>
+<td align="center">0</td>
+<td align="center">-2^7 - 2^7-1</td>
+<td align="center">byte b &#x3D; 10;</td>
+</tr>
+<tr>
+<td align="center">short-短整数</td>
+<td align="center">16</td>
+<td align="center">0</td>
+<td align="center">-2^15 - 2^15-1</td>
+<td align="center">short s &#x3D; 10;</td>
+</tr>
+<tr>
+<td align="center">int-整数</td>
+<td align="center">32</td>
+<td align="center">0</td>
+<td align="center">-2^31 - 2^31-1</td>
+<td align="center">int i &#x3D; 10;</td>
+</tr>
+<tr>
+<td align="center">long-长整数</td>
+<td align="center">64</td>
+<td align="center">0</td>
+<td align="center">-2^63 - 2^63-1</td>
+<td align="center">long l &#x3D; 10;</td>
+</tr>
+<tr>
+<td align="center">float-单精度</td>
+<td align="center">32</td>
+<td align="center">0.0</td>
+<td align="center">-2^31 - 2^31-1</td>
+<td align="center">float f &#x3D; 10.0f;</td>
+</tr>
+<tr>
+<td align="center">double-双精度</td>
+<td align="center">64</td>
+<td align="center">0.0</td>
+<td align="center">-2^61 - 2^61-1</td>
+<td align="center">double b &#x3D; 10.0d;</td>
+</tr>
+<tr>
+<td align="center">char-字符</td>
+<td align="center">16</td>
+<td align="center">空</td>
+<td align="center">0 - 2^15-1</td>
+<td align="center">char c &#x3D; ‘c’;</td>
+</tr>
+<tr>
+<td align="center">boolean-布尔值</td>
+<td align="center">8</td>
+<td align="center">false</td>
+<td align="center">true - false</td>
+<td align="center">boolean b &#x3D; true;</td>
+</tr>
+</tbody></table>
+</div><h2 id="二、-基础运算"><a href="#二、-基础运算" class="headerlink" title="二、 基础运算"></a>二、 基础运算</h2><div class="story post-story"><h3 id="1-byte类型"><a href="#1-byte类型" class="headerlink" title="1. byte类型"></a>1. byte类型</h3><p>两个byte类型进行运算，会提升到int类型再去运算，不可使用byte类型接收。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[]args)</span>&#123;</span><br><span class="line">    <span class="type">byte</span> <span class="variable">b1</span> <span class="operator">=</span> <span class="number">1</span>;</span><br><span class="line">    <span class="type">byte</span> <span class="variable">b2</span> <span class="operator">=</span> <span class="number">2</span>;</span><br><span class="line">    <span class="type">byte</span> <span class="variable">b3</span> <span class="operator">=</span> <span class="number">1</span> + <span class="number">2</span>;</span><br><span class="line">    <span class="type">byte</span> <span class="variable">b4</span> <span class="operator">=</span> b1 + b2;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>此时的b3&#x3D;1+2,是常量相加，编译的时候确定了结果并没有超过byte类型的取值范围，可以赋值给变量b3，因此b3&#x3D;1+2是正确的。<br>反之，b4&#x3D;b1+b2，b2和b3是变量，变量的值是可能变化的，在编译的时候，在编译的时候，编译器javac不确定b2+b3的结果是什么，因此会将结果以int类型进行处理，所以int类型不能赋值给byte类型，因此编译失败。</p>
+<h3 id="2-其他类型"><a href="#2-其他类型" class="headerlink" title="2. 其他类型"></a>2. 其他类型</h3><p>两个整数类型进行除法运算，结果只会为整数，只有小数参与运算才会产生小数。<br>char类型参与运算，使用的是十进制数值，’a’ -&gt; 97,’A’ -&gt; 65,’0’ -&gt; 48.  </p>
+<h3 id="3-不同类型运算"><a href="#3-不同类型运算" class="headerlink" title="3. 不同类型运算"></a>3. 不同类型运算</h3><p>算数表达式中包含不同类型的数值时，会自动提升数据类型。提升规则为：  </p>
+<ul>
+<li>byte,short,char类型会被自动提升为int类型，不管是否有其他类型参与运算；</li>
+<li>整个表达式自动提升到与表达式中最高等级的操作数相同的类型。  <ul>
+<li>byte,short,char -&gt; int -&gt; long -&gt; float -&gt; double<h3 id="4-其他注意事项"><a href="#4-其他注意事项" class="headerlink" title="4. 其他注意事项"></a>4. 其他注意事项</h3></li>
+</ul>
+</li>
+</ul>
+<ol>
+<li>在 + 操作中，出现了字符串之后，则进行字符串拼接，可以通过小括号提升优先级。  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">System.out.println(<span class="number">1</span> + <span class="number">2</span> + <span class="string">&quot;tao&quot;</span> + (<span class="number">3</span> + <span class="number">4</span>));</span><br><span class="line"><span class="comment">//输出结果为：3tao7</span></span><br></pre></td></tr></table></figure></li>
+<li>+&#x3D;,-&#x3D;,*&#x3D;,&#x2F;&#x3D;等运算会自动包含强制类型转换。<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">short</span> <span class="variable">s</span> <span class="operator">=</span> <span class="number">10</span>;</span><br><span class="line">s = s + <span class="number">10</span>; <span class="comment">//此代码报错，因为运算中s提升为int类型，结果为int类型赋值给short可能损失精度。</span></span><br><span class="line">s += <span class="number">10</span>;    <span class="comment">//此代码没有问题，隐含了类型转换，相当于s = (short)(s + 10)</span></span><br></pre></td></tr></table></figure></li>
+<li>++和–在单独运算中，前后没有区别，在运算式中，如果在变量前，先进行自增自减运算再参与运算式。<br>如果在变量后，先参与运算式，再自增自减。<h3 id="5-逻辑运算符"><a href="#5-逻辑运算符" class="headerlink" title="5. 逻辑运算符"></a>5. 逻辑运算符</h3><table>
+<thead>
+<tr>
+<th align="center">运算符</th>
+<th align="center">逻辑</th>
+<th align="left">结果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">&amp;</td>
+<td align="center">逻辑与</td>
+<td align="left">a&amp;b，a和b都是true，结果为true，否则为false</td>
+</tr>
+<tr>
+<td align="center">&amp;#124;</td>
+<td align="center">逻辑或</td>
+<td align="left">a&amp;#124;b，a和b都是false，结果为false，否则为true</td>
+</tr>
+<tr>
+<td align="center">^</td>
+<td align="center">逻辑异或</td>
+<td align="left">a^b，a和b结果不同为true，相同为false</td>
+</tr>
+<tr>
+<td align="center">!</td>
+<td align="center">逻辑非</td>
+<td align="left">!a，结果和a相反</td>
+</tr>
+<tr>
+<td align="center">&amp;&amp;</td>
+<td align="center">短路与</td>
+<td align="left">与的功能，一旦发现到false，则后续不执行</td>
+</tr>
+<tr>
+<td align="center">&amp;#124;&amp;#124;</td>
+<td align="center">短路或</td>
+<td align="left">或的功能，一旦发现到true，则后续不执行</td>
+</tr>
+</tbody></table>
+</li>
+</ol>
 
+</div>
   </div>
   
   
@@ -2593,7 +2718,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-07-12T01:58:06+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-07-12T02:50:09+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
     <p>更新于：2022年7月12日</p>
@@ -2722,9 +2847,19 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 
-  <div class="pjax">
-    <!-- pjax占位 -->
-  </div>
+  <section class="widget toc-wrapper shadow desktop mobile pjax" id="toc-div" >
+    
+  <header>
+    
+      <i class="fa-solid fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+    <div class='content'>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-text">一、数据类型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-Java%E7%9A%84%E5%85%AB%E7%A7%8D%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-text">1. Java的八种基本数据类型</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81-%E5%9F%BA%E7%A1%80%E8%BF%90%E7%AE%97"><span class="toc-text">二、 基础运算</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-byte%E7%B1%BB%E5%9E%8B"><span class="toc-text">1. byte类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%85%B6%E4%BB%96%E7%B1%BB%E5%9E%8B"><span class="toc-text">2. 其他类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E4%B8%8D%E5%90%8C%E7%B1%BB%E5%9E%8B%E8%BF%90%E7%AE%97"><span class="toc-text">3. 不同类型运算</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E5%85%B6%E4%BB%96%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="toc-text">4. 其他注意事项</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-text">5. 逻辑运算符</span></a></li></ol></li></ol>
+    </div>
+  </section>
 
   
 
@@ -2950,7 +3085,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <!-- internal -->
 
-<script src="/js/app.js?time=1657562290578.js"></script>
+<script src="/js/app.js?time=1657565414079.js"></script>
 
 
 
@@ -3142,7 +3277,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
     </ul>
   </div>
-  <script>volantis.js('/js/plugins/rightMenu.js?time=1657562290578')</script>
+  <script>volantis.js('/js/plugins/rightMenu.js?time=1657565414079')</script>
 
 
 
@@ -3155,19 +3290,19 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1657562290578")
+        volantis.js("/js/plugins/sites.js?time=1657565414079")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1657562290578")
+        volantis.js("/js/plugins/friends.js?time=1657565414079")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1657562290578")
+        volantis.js("/js/plugins/contributors.js?time=1657565414079")
       }
     
   };
@@ -3294,7 +3429,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("/js/search/hexo.js?time=1657562290578");
+    return volantis.js("/js/search/hexo.js?time=1657565414079");
   }
 
   function loadSearchService() {
@@ -3794,7 +3929,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"凭海听涛","url":"https://jiyezt.co/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Tao","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://jiyezt.co/","sameAs":["https://github.com/volantis-x"],"description":"我是一个要努力成为大佬的菜鸡！"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://jiyezt.co/","name":"凭海听涛"}},{"@type":"ListItem","position":2,"item":{"@id":"https://jiyezt.co/categories/Notes/","name":"Notes"}},{"@type":"ListItem","position":2,"item":{"@id":"https://jiyezt.co/categories/Notes/Java/","name":"Java"}},{"@type":"ListItem","position":2,"item":{"@id":"https://jiyezt.co/categories/Notes/Java/JavaSE/","name":"JavaSE"}},{"@type":"ListItem","position":3,"item":{"@id":"https://jiyezt.co/2022/07/12/day01-Java基础语法/","name":"day01_Java基础语法"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"day01_Java基础语法","description":"","datePublished":"2022-07-11T17:56:43.000Z","dateModified":"2022-07-11T17:58:06.886Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://jiyezt.co/2022/07/12/day01-Java%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/"},"author":{"@type":"Person","name":"Tao","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://jiyezt.co/"},"publisher":{"@type":"Organization","name":"凭海听涛","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://jiyezt.co/2022/07/12/day01-Java%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/","wordCount":0,"articleSection":"Notes","keywords":"Java","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"凭海听涛","url":"https://jiyezt.co/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Tao","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://jiyezt.co/","sameAs":["https://github.com/volantis-x"],"description":"我是一个要努力成为大佬的菜鸡！"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://jiyezt.co/","name":"凭海听涛"}},{"@type":"ListItem","position":2,"item":{"@id":"https://jiyezt.co/categories/Notes/","name":"Notes"}},{"@type":"ListItem","position":2,"item":{"@id":"https://jiyezt.co/categories/Notes/Java/","name":"Java"}},{"@type":"ListItem","position":2,"item":{"@id":"https://jiyezt.co/categories/Notes/Java/JavaSE/","name":"JavaSE"}},{"@type":"ListItem","position":3,"item":{"@id":"https://jiyezt.co/2022/07/12/day01-Java基础语法/","name":"day01_Java基础语法"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"day01_Java基础语法","description":"","datePublished":"2022-07-11T17:56:43.000Z","dateModified":"2022-07-11T18:50:09.718Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://jiyezt.co/2022/07/12/day01-Java%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/"},"author":{"@type":"Person","name":"Tao","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://jiyezt.co/"},"publisher":{"@type":"Organization","name":"凭海听涛","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://jiyezt.co/2022/07/12/day01-Java%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/","wordCount":0,"articleSection":"Notes","keywords":"Java","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 <!-- more -->
