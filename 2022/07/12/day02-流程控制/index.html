@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
-  <link rel="canonical" href="https://jiyezt.co/2022/07/12/day01-java基础语法/"/>
+  <link rel="canonical" href="https://jiyezt.co/2022/07/12/day02-流程控制/"/>
   <!-- 渲染优化 -->
   <!-- <meta http-equiv='x-dns-prefetch-control' content='on' />
   <link rel='dns-prefetch' href='https://cdn.jsdelivr.net'>
@@ -20,23 +20,21 @@
   <meta content="凭海听涛" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1657633060493" as="style">
+  <link rel="preload" href="/css/style.css?time=1657633060491" as="style">
   <link rel="preload" href="/media/fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
   <!-- 页面元数据 -->
-  <title>day01_Java基础语法 - 凭海听涛</title>
+  <title>day02-流程控制 - 凭海听涛</title>
   <meta name="keywords" content="Java,Java">
-  <meta name="description" content="一、数据类型1. Java的八种基本数据类型   数据类型 位数 默认值 取值范围 举例    byte-位 8 0 -2^7 - 2^7-1 byte b &#x3D; 10;   short-短整数 16 0 -2^15 - 2^15-1 short s &#x3D; 10;   int-整数 32 0 -2^31 - 2^31-1 int i &#x3D; 10;   long-长整数 64">
-<meta property="og:type" content="article">
-<meta property="og:title" content="day01_Java基础语法">
-<meta property="og:url" content="https://jiyezt.co/2022/07/12/day01-Java%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/index.html">
+  <meta property="og:type" content="article">
+<meta property="og:title" content="day02-流程控制">
+<meta property="og:url" content="https://jiyezt.co/2022/07/12/day02-%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/index.html">
 <meta property="og:site_name" content="凭海听涛">
-<meta property="og:description" content="一、数据类型1. Java的八种基本数据类型   数据类型 位数 默认值 取值范围 举例    byte-位 8 0 -2^7 - 2^7-1 byte b &#x3D; 10;   short-短整数 16 0 -2^15 - 2^15-1 short s &#x3D; 10;   int-整数 32 0 -2^31 - 2^31-1 int i &#x3D; 10;   long-长整数 64">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://jiyezt.co/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-<meta property="article:published_time" content="2022-07-11T17:56:43.000Z">
-<meta property="article:modified_time" content="2022-07-12T13:35:10.584Z">
+<meta property="article:published_time" content="2022-07-12T13:36:41.000Z">
+<meta property="article:modified_time" content="2022-07-12T13:37:35.815Z">
 <meta property="article:author" content="Tao">
 <meta property="article:tag" content="Java">
 <meta name="twitter:card" content="summary">
@@ -1659,8 +1657,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1657633060493" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1657633060493"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1657633060491" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1657633060491"></noscript>
   
 <script>
 if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
@@ -1731,7 +1729,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   volantis.dom = {}; // 页面Dom see: /source/js/app.js etc.
 
   volantis.GLOBAL_CONFIG ={
-    cdn: {"js":{"app":"/js/app.js?time=1657633060493","sites":"/js/plugins/sites.js?time=1657633060493","friends":"/js/plugins/friends.js?time=1657633060493","parallax":"/js/plugins/parallax.js?time=1657633060493","rightMenu":"/js/plugins/rightMenu.js?time=1657633060493","contributors":"/js/plugins/contributors.js?time=1657633060493","message":"/js/thirdparty/message.js?time=1657633060493","valine":"https://npm.elemecdn.com/valine@1.4/dist/Valine.min.js?time=1657633060493","search":"/js/search/hexo.js?time=1657633060493"},"css":{"style":"/css/style.css?time=1657633060493","message":"/css/message.css?time=1657633060493"}},
+    cdn: {"js":{"app":"/js/app.js?time=1657633060491","sites":"/js/plugins/sites.js?time=1657633060491","friends":"/js/plugins/friends.js?time=1657633060491","parallax":"/js/plugins/parallax.js?time=1657633060491","rightMenu":"/js/plugins/rightMenu.js?time=1657633060491","contributors":"/js/plugins/contributors.js?time=1657633060491","message":"/js/thirdparty/message.js?time=1657633060491","valine":"https://npm.elemecdn.com/valine@1.4/dist/Valine.min.js?time=1657633060491","search":"/js/search/hexo.js?time=1657633060491"},"css":{"style":"/css/style.css?time=1657633060491","message":"/css/message.css?time=1657633060491"}},
     default: {"avatar":"/media/placeholder/avatar/round/3442075.svg","link":"/media/placeholder/link/8f277b4ee0ecd.svg","cover":"/media/placeholder/cover/76b86c0226ffd.svg","image":"/media/placeholder/image/2659360.svg"},
     lastupdate: new Date('Tue Jul 12 2022 21:37:40 GMT+0800 (中国标准时间)'),
     sidebar: {
@@ -2462,7 +2460,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
 <div id="l_main" class=''>
   <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow article-type-post" id="post" itemscope itemprop="blogPost">
-  <link itemprop="mainEntityOfPage" href="https://jiyezt.co/2022/07/12/day01-Java%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/">
+  <link itemprop="mainEntityOfPage" href="https://jiyezt.co/2022/07/12/day02-%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="凭海听涛">
   </span>
@@ -2483,7 +2481,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       <h1 class="title" itemprop="name headline">
-        day01_Java基础语法
+        day02-流程控制
       </h1>
       <div class='new-meta-box'>
         
@@ -2518,7 +2516,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
         
           
-            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2022-07-12T01:56:43+08:00">
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2022-07-12T21:36:41+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
     <p>发布于：2022年7月12日</p>
@@ -2532,7 +2530,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class="new-meta-item browse leancloud">
     <a class='notlink'>
       
-      <div id="lc-pv" data-title="day01_Java基础语法" data-path="/2022/07/12/day01-Java%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/">
+      <div id="lc-pv" data-title="day02-流程控制" data-path="/2022/07/12/day02-%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/">
         <i class="fa-solid fa-eye fa-fw" aria-hidden="true"></i>
         <span id='number'><i class="fa-solid fa-circle-notch fa-spin fa-fw" aria-hidden="true"></i></span>
         次浏览
@@ -2553,131 +2551,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <h2 id="一、数据类型"><a href="#一、数据类型" class="headerlink" title="一、数据类型"></a>一、数据类型</h2><div class="story post-story"><h3 id="1-Java的八种基本数据类型"><a href="#1-Java的八种基本数据类型" class="headerlink" title="1. Java的八种基本数据类型"></a>1. Java的八种基本数据类型</h3><table>
-<thead>
-<tr>
-<th align="center">数据类型</th>
-<th align="center">位数</th>
-<th align="center">默认值</th>
-<th align="center">取值范围</th>
-<th align="center">举例</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">byte-位</td>
-<td align="center">8</td>
-<td align="center">0</td>
-<td align="center">-2^7 - 2^7-1</td>
-<td align="center">byte b &#x3D; 10;</td>
-</tr>
-<tr>
-<td align="center">short-短整数</td>
-<td align="center">16</td>
-<td align="center">0</td>
-<td align="center">-2^15 - 2^15-1</td>
-<td align="center">short s &#x3D; 10;</td>
-</tr>
-<tr>
-<td align="center">int-整数</td>
-<td align="center">32</td>
-<td align="center">0</td>
-<td align="center">-2^31 - 2^31-1</td>
-<td align="center">int i &#x3D; 10;</td>
-</tr>
-<tr>
-<td align="center">long-长整数</td>
-<td align="center">64</td>
-<td align="center">0</td>
-<td align="center">-2^63 - 2^63-1</td>
-<td align="center">long l &#x3D; 10;</td>
-</tr>
-<tr>
-<td align="center">float-单精度</td>
-<td align="center">32</td>
-<td align="center">0.0</td>
-<td align="center">-2^31 - 2^31-1</td>
-<td align="center">float f &#x3D; 10.0f;</td>
-</tr>
-<tr>
-<td align="center">double-双精度</td>
-<td align="center">64</td>
-<td align="center">0.0</td>
-<td align="center">-2^61 - 2^61-1</td>
-<td align="center">double b &#x3D; 10.0d;</td>
-</tr>
-<tr>
-<td align="center">char-字符</td>
-<td align="center">16</td>
-<td align="center">空</td>
-<td align="center">0 - 2^15-1</td>
-<td align="center">char c &#x3D; ‘c’;</td>
-</tr>
-<tr>
-<td align="center">boolean-布尔值</td>
-<td align="center">8</td>
-<td align="center">false</td>
-<td align="center">true - false</td>
-<td align="center">boolean b &#x3D; true;</td>
-</tr>
-</tbody></table>
-</div><h2 id="二、-基础运算"><a href="#二、-基础运算" class="headerlink" title="二、 基础运算"></a>二、 基础运算</h2><div class="story post-story"><h3 id="1-byte类型"><a href="#1-byte类型" class="headerlink" title="1. byte类型"></a>1. byte类型</h3><p>两个byte类型进行运算，会提升到int类型再去运算，不可使用byte类型接收。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title function_">main</span><span class="params">(String[]args)</span>&#123;</span><br><span class="line">    <span class="type">byte</span> <span class="variable">b1</span> <span class="operator">=</span> <span class="number">1</span>;</span><br><span class="line">    <span class="type">byte</span> <span class="variable">b2</span> <span class="operator">=</span> <span class="number">2</span>;</span><br><span class="line">    <span class="type">byte</span> <span class="variable">b3</span> <span class="operator">=</span> <span class="number">1</span> + <span class="number">2</span>;</span><br><span class="line">    <span class="type">byte</span> <span class="variable">b4</span> <span class="operator">=</span> b1 + b2;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>此时的b3&#x3D;1+2,是常量相加，编译的时候确定了结果并没有超过byte类型的取值范围，可以赋值给变量b3，因此b3&#x3D;1+2是正确的。<br>反之，b4&#x3D;b1+b2，b2和b3是变量，变量的值是可能变化的，在编译的时候，在编译的时候，编译器javac不确定b2+b3的结果是什么，因此会将结果以int类型进行处理，所以int类型不能赋值给byte类型，因此编译失败。</p>
-<h3 id="2-其他类型"><a href="#2-其他类型" class="headerlink" title="2. 其他类型"></a>2. 其他类型</h3><p>两个整数类型进行除法运算，结果只会为整数，只有小数参与运算才会产生小数。<br>char类型参与运算，使用的是十进制数值，’a’ -&gt; 97,’A’ -&gt; 65,’0’ -&gt; 48.  </p>
-<h3 id="3-不同类型运算"><a href="#3-不同类型运算" class="headerlink" title="3. 不同类型运算"></a>3. 不同类型运算</h3><p>算数表达式中包含不同类型的数值时，会自动提升数据类型。提升规则为：  </p>
-<ul>
-<li>byte,short,char类型会被自动提升为int类型，不管是否有其他类型参与运算；</li>
-<li>整个表达式自动提升到与表达式中最高等级的操作数相同的类型。  <ul>
-<li>byte,short,char -&gt; int -&gt; long -&gt; float -&gt; double  <h3 id="4-其他注意事项"><a href="#4-其他注意事项" class="headerlink" title="4. 其他注意事项"></a>4. 其他注意事项</h3></li>
-</ul>
-</li>
-</ul>
-<ol>
-<li>在 + 操作中，出现了字符串之后，则进行字符串拼接，可以通过小括号提升优先级。  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">System.out.println(<span class="number">1</span> + <span class="number">2</span> + <span class="string">&quot;tao&quot;</span> + (<span class="number">3</span> + <span class="number">4</span>));</span><br><span class="line"><span class="comment">//输出结果为：3tao7</span></span><br></pre></td></tr></table></figure></li>
-<li>+&#x3D;,-&#x3D;,*&#x3D;,&#x2F;&#x3D;等运算会自动包含强制类型转换。<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">short</span> <span class="variable">s</span> <span class="operator">=</span> <span class="number">10</span>;</span><br><span class="line">s = s + <span class="number">10</span>; <span class="comment">//此代码报错，因为运算中s提升为int类型，结果为int类型赋值给short可能损失精度。</span></span><br><span class="line">s += <span class="number">10</span>;    <span class="comment">//此代码没有问题，隐含了类型转换，相当于s = (short)(s + 10)</span></span><br></pre></td></tr></table></figure></li>
-<li>++和–在单独运算中，前后没有区别，在运算式中，如果在变量前，先进行自增自减运算再参与运算式。<br>如果在变量后，先参与运算式，再自增自减。<h3 id="5-逻辑运算符"><a href="#5-逻辑运算符" class="headerlink" title="5. 逻辑运算符"></a>5. 逻辑运算符</h3><table>
-<thead>
-<tr>
-<th align="center">运算符</th>
-<th align="center">逻辑</th>
-<th align="left">结果</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">&amp;</td>
-<td align="center">逻辑与</td>
-<td align="left">a&amp;b，a和b都是true，结果为true，否则为false</td>
-</tr>
-<tr>
-<td align="center">&amp;#124;</td>
-<td align="center">逻辑或</td>
-<td align="left">a&amp;#124;b，a和b都是false，结果为false，否则为true</td>
-</tr>
-<tr>
-<td align="center">^</td>
-<td align="center">逻辑异或</td>
-<td align="left">a^b，a和b结果不同为true，相同为false</td>
-</tr>
-<tr>
-<td align="center">!</td>
-<td align="center">逻辑非</td>
-<td align="left">!a，结果和a相反</td>
-</tr>
-<tr>
-<td align="center">&amp;&amp;</td>
-<td align="center">短路与</td>
-<td align="left">与的功能，一旦发现到false，则后续不执行</td>
-</tr>
-<tr>
-<td align="center">&amp;#124;&amp;#124;</td>
-<td align="center">短路或</td>
-<td align="left">或的功能，一旦发现到true，则后续不执行</td>
-</tr>
-</tbody></table>
-</li>
-</ol>
+    
 
-</div>
   </div>
   
   
@@ -2691,7 +2566,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <i class="fa-solid fa-bookmark fa-fw" aria-hidden="true"></i><span>相关文章</span>
     </section>
     <section class='body'>
-      <div class="vlts-rps"><a class="item" href="\2022\07\12\day02-流程控制\" title="day02-流程控制" rel="bookmark "><img src="https://uploadbeta.com/api/pictures/random/?key=BingEverydayWallpaperPicture" class="lazyload" data-srcset="https://uploadbeta.com/api/pictures/random/?key=BingEverydayWallpaperPicture" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><span class="title">day02-流程控制</span></a></div></section></div>
+      <div class="vlts-rps"><a class="item" href="\2022\07\12\day01-Java基础语法\" title="day01_Java基础语法" rel="bookmark "><img src="https://uploadbeta.com/api/pictures/random/?key=BingEverydayWallpaperPicture" class="lazyload" data-srcset="https://uploadbeta.com/api/pictures/random/?key=BingEverydayWallpaperPicture" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" /><span class="title">day01_Java基础语法</span></a></div></section></div>
       
       
         <div class='copyright'>
@@ -2703,7 +2578,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
             
               
-                <p>本文永久链接是：<a href=https://jiyezt.co/2022/07/12/day01-Java%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/>https://jiyezt.co/2022/07/12/day01-Java%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/</a></p>
+                <p>本文永久链接是：<a href=https://jiyezt.co/2022/07/12/day02-%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/>https://jiyezt.co/2022/07/12/day02-%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/</a></p>
               
             
           </blockquote>
@@ -2720,7 +2595,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-07-12T21:35:10+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-07-12T21:37:35+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
     <p>更新于：2022年7月12日</p>
@@ -2746,7 +2621,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://jiyezt.co/2022/07/12/day01-Java%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/&title=day01_Java基础语法 - 凭海听涛&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://jiyezt.co/2022/07/12/day02-%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/&title=day02-流程控制 - 凭海听涛&summary="
           
           >
           
@@ -2758,7 +2633,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://jiyezt.co/2022/07/12/day01-Java%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/&title=day01_Java基础语法 - 凭海听涛&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://jiyezt.co/2022/07/12/day02-%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/&title=day02-流程控制 - 凭海听涛&summary="
           
           >
           
@@ -2770,7 +2645,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=https://jiyezt.co/2022/07/12/day01-Java%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/&title=day01_Java基础语法 - 凭海听涛&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=https://jiyezt.co/2022/07/12/day02-%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/&title=day02-流程控制 - 凭海听涛&summary="
           
           >
           
@@ -2803,20 +2678,28 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     <div class="prev-next">
       
-        <a class='prev' href='/2022/07/12/day02-%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/'>
-          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>day02-流程控制</p>
-          <p class='content'>
-</p>
-        </a>
       
-      
-        <a class='next' href='/2022/03/23/%E5%AE%9E%E7%8E%B0%E5%9C%A8CentOS%E4%B8%8A%E9%9D%9Eroot%E7%94%A8%E6%88%B7%E5%85%8D%E5%AF%86%E7%99%BB%E5%BD%95/'>
-          <p class='title'>实现在CentOS上非root用户免密登录<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
-          <p class='content'>本文是记录一下在搭建腾讯云服务器时，解决非root用户登录需要输入密码的问题。
+        <a class='next' href='/2022/07/12/day01-Java%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/'>
+          <p class='title'>day01_Java基础语法<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>一、数据类型1. Java的八种基本数据类型
 
 
-1、创建SSH密钥并绑定用户
-首先在本地创建ssh密钥,密钥位置为&#x2F;user&#x2F;.ssh1s...</p>
+数据类型
+位数
+默认值
+取值范围
+举例
+
+
+
+byte-位
+8
+0
+-2^7 - 2^7-1
+byte b &#x3D; 10;
+
+
+short...</p>
         </a>
       
     </div>
@@ -2832,7 +2715,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
   <article class="post white-box reveal shadow" id="comments">
     <span hidden>
-      <meta itemprop="discussionUrl" content="/2022/07/12/day01-Java%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/index.html#comments">
+      <meta itemprop="discussionUrl" content="/2022/07/12/day02-%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/index.html#comments">
     </span>
     <p ct><i class='fa-solid fa-comments'></i> 评论</p>
     
@@ -2855,19 +2738,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 
-  <section class="widget toc-wrapper shadow desktop mobile pjax" id="toc-div" >
-    
-  <header>
-    
-      <i class="fa-solid fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
-    
-  </header>
-
-
-    <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-text">一、数据类型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-Java%E7%9A%84%E5%85%AB%E7%A7%8D%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-text">1. Java的八种基本数据类型</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81-%E5%9F%BA%E7%A1%80%E8%BF%90%E7%AE%97"><span class="toc-text">二、 基础运算</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-byte%E7%B1%BB%E5%9E%8B"><span class="toc-text">1. byte类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%85%B6%E4%BB%96%E7%B1%BB%E5%9E%8B"><span class="toc-text">2. 其他类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E4%B8%8D%E5%90%8C%E7%B1%BB%E5%9E%8B%E8%BF%90%E7%AE%97"><span class="toc-text">3. 不同类型运算</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E5%85%B6%E4%BB%96%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="toc-text">4. 其他注意事项</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-text">5. 逻辑运算符</span></a></li></ol></li></ol>
-    </div>
-  </section>
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
 
   
 
@@ -2975,7 +2848,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <script>
   window.pdata={}
   pdata.ispage=true;
-  pdata.postTitle="day01_Java基础语法";
+  pdata.postTitle="day02-流程控制";
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   pdata.commentConfig={};
@@ -3088,7 +2961,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <!-- internal -->
 
-<script src="/js/app.js?time=1657633060493.js"></script>
+<script src="/js/app.js?time=1657633060491.js"></script>
 
 
 
@@ -3280,7 +3153,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
     </ul>
   </div>
-  <script>volantis.js('/js/plugins/rightMenu.js?time=1657633060493')</script>
+  <script>volantis.js('/js/plugins/rightMenu.js?time=1657633060491')</script>
 
 
 
@@ -3293,19 +3166,19 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1657633060493")
+        volantis.js("/js/plugins/sites.js?time=1657633060491")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1657633060493")
+        volantis.js("/js/plugins/friends.js?time=1657633060491")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1657633060493")
+        volantis.js("/js/plugins/contributors.js?time=1657633060491")
       }
     
   };
@@ -3432,7 +3305,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("/js/search/hexo.js?time=1657633060493");
+    return volantis.js("/js/search/hexo.js?time=1657633060491");
   }
 
   function loadSearchService() {
@@ -3932,7 +3805,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"凭海听涛","url":"https://jiyezt.co/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Tao","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://jiyezt.co/","sameAs":["https://github.com/volantis-x"],"description":"我是一个要努力成为大佬的菜鸡！"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://jiyezt.co/","name":"凭海听涛"}},{"@type":"ListItem","position":2,"item":{"@id":"https://jiyezt.co/categories/Notes/","name":"Notes"}},{"@type":"ListItem","position":2,"item":{"@id":"https://jiyezt.co/categories/Notes/Java/","name":"Java"}},{"@type":"ListItem","position":3,"item":{"@id":"https://jiyezt.co/2022/07/12/day01-Java基础语法/","name":"day01_Java基础语法"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"day01_Java基础语法","description":"","datePublished":"2022-07-11T17:56:43.000Z","dateModified":"2022-07-12T13:35:10.584Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://jiyezt.co/2022/07/12/day01-Java%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/"},"author":{"@type":"Person","name":"Tao","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://jiyezt.co/"},"publisher":{"@type":"Organization","name":"凭海听涛","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://jiyezt.co/2022/07/12/day01-Java%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/","wordCount":0,"articleSection":"Notes","keywords":"Java","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"凭海听涛","url":"https://jiyezt.co/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Tao","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://jiyezt.co/","sameAs":["https://github.com/volantis-x"],"description":"我是一个要努力成为大佬的菜鸡！"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://jiyezt.co/","name":"凭海听涛"}},{"@type":"ListItem","position":2,"item":{"@id":"https://jiyezt.co/categories/Notes/","name":"Notes"}},{"@type":"ListItem","position":2,"item":{"@id":"https://jiyezt.co/categories/Notes/Java/","name":"Java"}},{"@type":"ListItem","position":3,"item":{"@id":"https://jiyezt.co/2022/07/12/day02-流程控制/","name":"day02-流程控制"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"day02-流程控制","description":"","datePublished":"2022-07-12T13:36:41.000Z","dateModified":"2022-07-12T13:37:35.815Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://jiyezt.co/2022/07/12/day02-%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/"},"author":{"@type":"Person","name":"Tao","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://jiyezt.co/"},"publisher":{"@type":"Organization","name":"凭海听涛","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://jiyezt.co/2022/07/12/day02-%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/","wordCount":0,"articleSection":"Notes","keywords":"Java","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 <!-- more -->
