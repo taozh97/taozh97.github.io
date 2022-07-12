@@ -20,7 +20,7 @@
   <meta content="凭海听涛" name="apple-mobile-web-app-title">
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
-  <link rel="preload" href="/css/style.css?time=1657633747232" as="style">
+  <link rel="preload" href="/css/style.css?time=1657638453493" as="style">
   <link rel="preload" href="/media/fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 <link rel="preload" href="/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
@@ -36,7 +36,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://jiyezt.co/media/org.volantis/blog/favicon/android-chrome-192x192.png">
 <meta property="article:published_time" content="2022-07-11T17:56:43.000Z">
-<meta property="article:modified_time" content="2022-07-12T13:35:10.584Z">
+<meta property="article:modified_time" content="2022-07-12T15:07:27.277Z">
 <meta property="article:author" content="Tao">
 <meta property="article:tag" content="Java">
 <meta name="twitter:card" content="summary">
@@ -1659,8 +1659,8 @@ ul.list-v >li>a:hover {
 }
 
   </style>
-  <link rel="stylesheet" href="/css/style.css?time=1657633747232" media="print" onload="this.media='all';this.onload=null">
-  <noscript><link rel="stylesheet" href="/css/style.css?time=1657633747232"></noscript>
+  <link rel="stylesheet" href="/css/style.css?time=1657638453493" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css?time=1657638453493"></noscript>
   
 <script>
 if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
@@ -1731,9 +1731,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   volantis.dom = {}; // 页面Dom see: /source/js/app.js etc.
 
   volantis.GLOBAL_CONFIG ={
-    cdn: {"js":{"app":"/js/app.js?time=1657633747232","sites":"/js/plugins/sites.js?time=1657633747232","friends":"/js/plugins/friends.js?time=1657633747232","parallax":"/js/plugins/parallax.js?time=1657633747232","rightMenu":"/js/plugins/rightMenu.js?time=1657633747232","contributors":"/js/plugins/contributors.js?time=1657633747232","message":"/js/thirdparty/message.js?time=1657633747232","valine":"https://npm.elemecdn.com/valine@1.4/dist/Valine.min.js?time=1657633747232","search":"/js/search/hexo.js?time=1657633747232"},"css":{"style":"/css/style.css?time=1657633747232","message":"/css/message.css?time=1657633747232"}},
+    cdn: {"js":{"app":"/js/app.js?time=1657638453493","sites":"/js/plugins/sites.js?time=1657638453493","friends":"/js/plugins/friends.js?time=1657638453493","parallax":"/js/plugins/parallax.js?time=1657638453493","rightMenu":"/js/plugins/rightMenu.js?time=1657638453493","contributors":"/js/plugins/contributors.js?time=1657638453493","message":"/js/thirdparty/message.js?time=1657638453493","valine":"https://npm.elemecdn.com/valine@1.4/dist/Valine.min.js?time=1657638453493","search":"/js/search/hexo.js?time=1657638453493"},"css":{"style":"/css/style.css?time=1657638453493","message":"/css/message.css?time=1657638453493"}},
     default: {"avatar":"/media/placeholder/avatar/round/3442075.svg","link":"/media/placeholder/link/8f277b4ee0ecd.svg","cover":"/media/placeholder/cover/76b86c0226ffd.svg","image":"/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date('Tue Jul 12 2022 21:49:07 GMT+0800 (中国标准时间)'),
+    lastupdate: new Date('Tue Jul 12 2022 23:07:33 GMT+0800 (中国标准时间)'),
     sidebar: {
       for_page: ["blogger","category","tagcloud","webinfo"],
       for_post: ["toc"],
@@ -2676,6 +2676,37 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </tbody></table>
 </li>
 </ol>
+</div><h2 id="三、-流程控制"><a href="#三、-流程控制" class="headerlink" title="三、 流程控制"></a>三、 流程控制</h2><div class="story post-story"><h3 id="1-顺序结构-x2F-分支结构之if结构"><a href="#1-顺序结构-x2F-分支结构之if结构" class="headerlink" title="1. 顺序结构&#x2F;分支结构之if结构"></a>1. 顺序结构&#x2F;分支结构之if结构</h3><h3 id="2-switch结构"><a href="#2-switch结构" class="headerlink" title="2. switch结构"></a>2. switch结构</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">switch</span>(表达式) &#123;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">1</span>:</span><br><span class="line">        语句<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    <span class="keyword">case</span> <span class="number">2</span>:</span><br><span class="line">        语句<span class="number">2</span>;</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">    ...</span><br><span class="line">    <span class="keyword">default</span>:</span><br><span class="line">        语句n+<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>表达式和case值匹配就会执行对应case的语句，都不匹配则执行default语句。</p>
+<h3 id="3-for循环"><a href="#3-for循环" class="headerlink" title="3. for循环"></a>3. for循环</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(初始化语句;条件判断语句;条件控制语句) &#123;</span><br><span class="line">    循环体语句;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="4-while和do…while"><a href="#4-while和do…while" class="headerlink" title="4. while和do…while"></a>4. while和do…while</h3><ul>
+<li>while循环<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span>(条件判断语句) &#123;</span><br><span class="line">    循环体语句;</span><br><span class="line">    条件控制语句;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>do…while<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">do</span> &#123;</span><br><span class="line">    循环体语句;</span><br><span class="line">    条件控制语句;</span><br><span class="line">&#125;<span class="keyword">while</span>(条件判断语句)</span><br></pre></td></tr></table></figure>
+<h3 id="5-有关循环的要点"><a href="#5-有关循环的要点" class="headerlink" title="5. 有关循环的要点"></a>5. 有关循环的要点</h3></li>
+<li>三种循环的异同<ul>
+<li>for循环和while循环先判断条件是否成立，然后决定是否执行循环体(先判断后执行);</li>
+<li>do…while循环先执行一次循环，然后再去判断条件是否成立，是否继续执行循环体。</li>
+</ul>
+</li>
+<li>for循环和while循环的区别<ul>
+<li>条件控制语句所控制的自增变量，因为归属for循环的语法结构中，在for循环结束后，就不能再次被访问到了。</li>
+<li>条件控制语句所控制的自增变量，对于while循环来说不归属其语法结构中，在while循环结束后，该变量还可以继续使用。</li>
+</ul>
+</li>
+<li>死循环(无限循环)的三种格式<ul>
+<li>for(;;) {}</li>
+<li>while(true) {}</li>
+<li>do() {}while(true)</li>
+</ul>
+</li>
+</ul>
+</div><h2 id="四、-数组"><a href="#四、-数组" class="headerlink" title="四、 数组"></a>四、 数组</h2><div class="story post-story"><h3 id="1-数组定义格式"><a href="#1-数组定义格式" class="headerlink" title="1. 数组定义格式"></a>1. 数组定义格式</h3><ul>
+<li>int[] arr;</li>
+<li>int arr[];</li>
+<li>int[] arr &#x3D; new int[3];<h3 id="2-数组初始化"><a href="#2-数组初始化" class="headerlink" title="2. 数组初始化"></a>2. 数组初始化</h3></li>
+<li>数据类型[] 数组名 &#x3D; new 数据类型[]{元素1,元素2,…};</li>
+<li>数据类型[] 数组名 &#x3D; {元素1,元素2,…};<h3 id="3-数组的传递"><a href="#3-数组的传递" class="headerlink" title="3. 数组的传递"></a>3. 数组的传递</h3><span color="red">在方法间传递数组时，传递的是数组的地址值</span></li>
+</ul>
 
 </div>
   </div>
@@ -2720,7 +2751,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-07-12T21:35:10+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-07-12T23:07:27+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
     <p>更新于：2022年7月12日</p>
@@ -2865,7 +2896,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-text">一、数据类型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-Java%E7%9A%84%E5%85%AB%E7%A7%8D%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-text">1. Java的八种基本数据类型</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81-%E5%9F%BA%E7%A1%80%E8%BF%90%E7%AE%97"><span class="toc-text">二、 基础运算</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-byte%E7%B1%BB%E5%9E%8B"><span class="toc-text">1. byte类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%85%B6%E4%BB%96%E7%B1%BB%E5%9E%8B"><span class="toc-text">2. 其他类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E4%B8%8D%E5%90%8C%E7%B1%BB%E5%9E%8B%E8%BF%90%E7%AE%97"><span class="toc-text">3. 不同类型运算</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E5%85%B6%E4%BB%96%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="toc-text">4. 其他注意事项</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-text">5. 逻辑运算符</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-text">一、数据类型</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-Java%E7%9A%84%E5%85%AB%E7%A7%8D%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-text">1. Java的八种基本数据类型</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81-%E5%9F%BA%E7%A1%80%E8%BF%90%E7%AE%97"><span class="toc-text">二、 基础运算</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-byte%E7%B1%BB%E5%9E%8B"><span class="toc-text">1. byte类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E5%85%B6%E4%BB%96%E7%B1%BB%E5%9E%8B"><span class="toc-text">2. 其他类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E4%B8%8D%E5%90%8C%E7%B1%BB%E5%9E%8B%E8%BF%90%E7%AE%97"><span class="toc-text">3. 不同类型运算</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E5%85%B6%E4%BB%96%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="toc-text">4. 其他注意事项</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-text">5. 逻辑运算符</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81-%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6"><span class="toc-text">三、 流程控制</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E9%A1%BA%E5%BA%8F%E7%BB%93%E6%9E%84-x2F-%E5%88%86%E6%94%AF%E7%BB%93%E6%9E%84%E4%B9%8Bif%E7%BB%93%E6%9E%84"><span class="toc-text">1. 顺序结构&#x2F;分支结构之if结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-switch%E7%BB%93%E6%9E%84"><span class="toc-text">2. switch结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-for%E5%BE%AA%E7%8E%AF"><span class="toc-text">3. for循环</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-while%E5%92%8Cdo%E2%80%A6while"><span class="toc-text">4. while和do…while</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E6%9C%89%E5%85%B3%E5%BE%AA%E7%8E%AF%E7%9A%84%E8%A6%81%E7%82%B9"><span class="toc-text">5. 有关循环的要点</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81-%E6%95%B0%E7%BB%84"><span class="toc-text">四、 数组</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E6%95%B0%E7%BB%84%E5%AE%9A%E4%B9%89%E6%A0%BC%E5%BC%8F"><span class="toc-text">1. 数组定义格式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E6%95%B0%E7%BB%84%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="toc-text">2. 数组初始化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E6%95%B0%E7%BB%84%E7%9A%84%E4%BC%A0%E9%80%92"><span class="toc-text">3. 数组的传递</span></a></li></ol></li></ol>
     </div>
   </section>
 
@@ -3088,7 +3119,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 <!-- internal -->
 
-<script src="/js/app.js?time=1657633747232.js"></script>
+<script src="/js/app.js?time=1657638453493.js"></script>
 
 
 
@@ -3280,7 +3311,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
     </ul>
   </div>
-  <script>volantis.js('/js/plugins/rightMenu.js?time=1657633747232')</script>
+  <script>volantis.js('/js/plugins/rightMenu.js?time=1657638453493')</script>
 
 
 
@@ -3293,19 +3324,19 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
       const sites_api = document.getElementById('sites-api');
       if (sites_api != undefined && typeof SitesJS === 'undefined') {
-        volantis.js("/js/plugins/sites.js?time=1657633747232")
+        volantis.js("/js/plugins/sites.js?time=1657638453493")
       }
     
     
       const friends_api = document.getElementById('friends-api');
       if (friends_api != undefined && typeof FriendsJS === 'undefined') {
-        volantis.js("/js/plugins/friends.js?time=1657633747232")
+        volantis.js("/js/plugins/friends.js?time=1657638453493")
       }
     
     
       const contributors_api = document.getElementById('contributors-api');
       if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
-        volantis.js("/js/plugins/contributors.js?time=1657633747232")
+        volantis.js("/js/plugins/contributors.js?time=1657638453493")
       }
     
   };
@@ -3432,7 +3463,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   function loadSearchScript() {
     // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
-    return volantis.js("/js/search/hexo.js?time=1657633747232");
+    return volantis.js("/js/search/hexo.js?time=1657638453493");
   }
 
   function loadSearchService() {
@@ -3932,7 +3963,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"凭海听涛","url":"https://jiyezt.co/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Tao","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://jiyezt.co/","sameAs":["https://github.com/volantis-x"],"description":"我是一个要努力成为大佬的菜鸡！"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://jiyezt.co/","name":"凭海听涛"}},{"@type":"ListItem","position":2,"item":{"@id":"https://jiyezt.co/categories/Notes/","name":"Notes"}},{"@type":"ListItem","position":2,"item":{"@id":"https://jiyezt.co/categories/Notes/Java/","name":"Java"}},{"@type":"ListItem","position":3,"item":{"@id":"https://jiyezt.co/2022/07/12/day01-Java基础语法/","name":"day01_Java基础语法"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"day01_Java基础语法","description":"","datePublished":"2022-07-11T17:56:43.000Z","dateModified":"2022-07-12T13:35:10.584Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://jiyezt.co/2022/07/12/day01-Java%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/"},"author":{"@type":"Person","name":"Tao","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://jiyezt.co/"},"publisher":{"@type":"Organization","name":"凭海听涛","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://jiyezt.co/2022/07/12/day01-Java%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/","wordCount":0,"articleSection":"Notes","keywords":"Java","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"凭海听涛","url":"https://jiyezt.co/","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Tao","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://jiyezt.co/","sameAs":["https://github.com/volantis-x"],"description":"我是一个要努力成为大佬的菜鸡！"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://jiyezt.co/","name":"凭海听涛"}},{"@type":"ListItem","position":2,"item":{"@id":"https://jiyezt.co/categories/Notes/","name":"Notes"}},{"@type":"ListItem","position":2,"item":{"@id":"https://jiyezt.co/categories/Notes/Java/","name":"Java"}},{"@type":"ListItem","position":3,"item":{"@id":"https://jiyezt.co/2022/07/12/day01-Java基础语法/","name":"day01_Java基础语法"}}]},{"@context":"http://schema.org","@type":"BlogPosting","headline":"day01_Java基础语法","description":"","datePublished":"2022-07-11T17:56:43.000Z","dateModified":"2022-07-12T15:07:27.277Z","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"https://jiyezt.co/2022/07/12/day01-Java%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/"},"author":{"@type":"Person","name":"Tao","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://jiyezt.co/"},"publisher":{"@type":"Organization","name":"凭海听涛","logo":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://jiyezt.co/2022/07/12/day01-Java%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/","wordCount":0,"articleSection":"Notes","keywords":"Java","image":{"@type":"ImageObject","url":"/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 <!-- more -->
